@@ -1,0 +1,22 @@
+.user-detail-container {
+    width: 35%;
+}
+
+.user-detail-container p{
+    font-size: 14px;
+    margin-bottom: 12px;
+}
+
+.user-detail-container .container{
+    background: white;
+    border: 1px solid lightgray;
+    padding: 0.5rem;
+    display: flex;
+}
+
+.all-center{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    flex: 50%;
+}

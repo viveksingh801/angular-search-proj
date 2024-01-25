@@ -1,0 +1,23 @@
+.user-detail-container {
+    width: 80%;
+    height: 120px;
+}
+
+.user-detail-container p{
+    font-size: 12px;
+    margin-bottom: 12px;
+    font-weight: 400;
+}
+
+.user-detail-container .container{
+    background: white;
+    padding: 0.5rem;
+    display: flex;
+}
+
+.all-center{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    flex: 50%;
+}

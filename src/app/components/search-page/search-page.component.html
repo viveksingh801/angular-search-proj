@@ -1,9 +1,39 @@
 <div class="container">
-    <form [formGroup]="searchForm" (ngSubmit)="sendUser()">
-        <label for="">Username</label>
-        <input type="text" name="" id="" formControlName="username" >
 
-        <button class="btn btn-primary"
-        [disabled]="!this.searchForm.valid">Search</button>
+    <div class="row height d-flex justify-content-center align-items-center">
+
+      <div class="col-md-8" style="margin-top: 10rem;">
+        <h6>Search Github User</h6>
+        <form [formGroup]="searchForm" (ngSubmit)="sendUser()">
+        <div class="search">
+          <i class="fa fa-search"></i>
+          <input type="text" class="form-control" formControlName="username" placeholder="Ethan linker">
+          <button class="btn" [disabled]="!this.searchForm.valid">Search</button>
+        </div>
     </form>
+        
+      </div>
+
+      
+    </div>
+    
+</div>
+
+<div class="container" style="display: flex; justify-content: center;">
+
+  <div class="user-detail-container row" *ngIf="userDetail">
+    <div class="col-12">
+      <p>Seach Results</p>
+      <div class="container">
+        <div class="all-center">
+          <p>User Image</p>
+          <img class="" width="120px" height="120px" src={{userDetail.avatar_url}} alt="Card image cap">
+        </div>
+        <div class="all-center">
+          <p>Github Username</p>
+          <h5 class="card-title">{{userDetail.name}}</h5>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>

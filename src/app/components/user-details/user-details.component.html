@@ -7,13 +7,50 @@ public_repos
 login: 'aakriti-p' 
 src={{userDetail.avatar_url}} -->
 
-<div class="card" style="width: 18rem;">
-    <img class="card-img-top" src={{userDetail.avatar_url}} alt="Card image cap">
-    <div class="card-body">
-      <h5 class="card-title">{{userDetail.login}}</h5>
-      <p class="card-text">Total Public Repos : {{userDetail.public_repos}}</p>
-      <p class="card-text">Followers : {{userDetail.followers}}</p>
-      <p class="card-text">Joined : {{userDetail.created_at | date}}</p>
+<div class="container">
+
+  <div class="row height d-flex justify-content-center align-items-center">
+
+    <div class="col-md-8" style="margin-top: 10rem;">
+      <h6>Your search history</h6>
+
+      <div class="container" *ngIf="history.length == 0">No history</div>
+
+      <table class="table table-bordered" *ngIf="history.length > 0">
+        <thead class="thead-light">
+          <tr>
+            <th scope="col">Search Term</th>
+            <th scope="col">Search Result</th>
+          </tr>
+        </thead>
+        <tbody style="background-color: white;">
+          <tr *ngFor="let item of history">
+            <th scope="row">{{item.login}}</th>
+            <th>
+              <div class="user-detail-container row">
+                <div class="col-12">
+                  <div class="container">
+                    <div class="all-center">
+                      <p>User Image</p>
+                      <img class="" width="60px" height="60px" src={{item.avatar_url}} alt="Card image cap">
+                    </div>
+                    <div class="all-center">
+                      <p>Github Username</p>
+                      <h5 class="card-title">{{item.name}}</h5>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </th>
+          </tr>
+        </tbody>
+      </table>
 
     </div>
+
+    
   </div>
+  <div class="search">
+    <button class="btn" (click)="clearHistory()">Clear Search History</button>
+  </div>
+</div>

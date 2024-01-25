@@ -1,13 +1,13 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#">Github Searcher</a>
+<nav class="navbar navbar-expand-lg navbar-light bg-light" style="padding: 1.5rem;box-shadow: rgba(100, 100, 111, 0.2)">
+    <div class="container-fluid" style="display: flex;">
+      <a class="navbar-brand" href="#"></a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup" style="justify-content: flex-end;">
         <div class="navbar-nav">
-          <a class="nav-link active" aria-current="page" [routerLink]="['']">Home</a>
-          <a class="nav-link" [routerLink]="['search']">SearchPage</a>
+          <a class="nav-link" [routerLink]="['']" [routerLinkActive]="['active']" style="margin-left: 2rem;">Home</a>
+          <a class="nav-link active" aria-current="page" [routerLink]="['history']" [routerLinkActive]="['active']">History</a>
         </div>
       </div>
     </div>
