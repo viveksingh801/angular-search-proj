@@ -1,0 +1,19 @@
+<!-- <p>user-details works!</p>
+
+avatar_url
+created_at
+followers
+public_repos
+login: 'aakriti-p' 
+src={{userDetail.avatar_url}} -->
+
+<div class="card" style="width: 18rem;">
+    <img class="card-img-top" src={{userDetail.avatar_url}} alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">{{userDetail.login}}</h5>
+      <p class="card-text">Total Public Repos : {{userDetail.public_repos}}</p>
+      <p class="card-text">Followers : {{userDetail.followers}}</p>
+      <p class="card-text">Joined : {{userDetail.created_at | date}}</p>
+
+    </div>
+  </div>
